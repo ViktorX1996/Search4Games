@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import "./test.css"
 import useMediaQuery from "./hooks/useMediaQuery";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faArrowUp, faArrowDown, faAngleDown } from '@fortawesome/free-solid-svg-icons'
@@ -58,7 +59,7 @@ function App() {
       </section>
 
       <main>
-        <section className="global__card__container">
+        {/* <section className="global__card__container">
           <div class="card">
             <img src={imgAvatar}
               alt="Avatar"
@@ -72,12 +73,122 @@ function App() {
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </section> */}
+        <section
+          className="global__card__container"
+        >
+          {/* <div className="card__tablet"> */}
+          <div className="Gallery">
 
-      <DescriptionPage />
+            {/* <div class="card__container"> */}
+            <div className="card">
+              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/fbe/fbe1e38e1b21d64c3660a5c01a2f28d7.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/44b/44b2eff1df353a1b2b094b6abc401d2d.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/0bb/0bb0e511659e70114fbd05de8a6331cc.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/14c/14c8374057999a39e21fde4c793cc55e.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+            <div class="card">
+              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
+                alt="Avatar"
+                className="card__img"
+              />
+              <h2><b>Title</b></h2>
+              <div className="card__rating__date">
+                <span>5.22</span>
+                <span>02.05.2022</span>
+              </div>
+            </div>
+          </div>
 
-    </div>
+      </section>
+
+    </main>
+
+      {/* <DescriptionPage /> */ }
+
+    </div >
   );
 }
 
