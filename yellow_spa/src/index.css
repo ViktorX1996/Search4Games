@@ -95,7 +95,7 @@ section{
   .about__section{
     flex-direction: column;
   }
-  .about__section > span,b {
+  .about__section > span {
     margin-left: 10px;
     margin-top: 20px;
   }
