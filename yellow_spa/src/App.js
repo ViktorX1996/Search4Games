@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from 'react'
+import { useDispatch,useSelector } from 'react-redux'
 import "./index.css";
 import "./test.css"
 import useMediaQuery from "./hooks/useMediaQuery";
@@ -6,17 +7,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faArrowUp, faArrowDown, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 import imgAvatar from '../src/common/images/img_avatar.png'
 import DescriptionPage from "./Components/DescriptionPage";
+import { getAllGames } from './Redux/gameReducer';
+import Card from './Components/Card/Card';
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function App() {
   // You can use any @media property
   const isDesktop = useMediaQuery('(min-width: 960px)');
   const isMobile = useMediaQuery('(max-width: 599px)');
   const isTablet = !isDesktop && !isMobile;
+  // const gamesList = useSelector(state => state.gameSlice.gamesList);
+  const gamesList = useSelector(state => state.game.gamesList);
+    const dispatch = useDispatch()
+  
+    useEffect(() => {
+        dispatch(getAllGames({page:2, pageSize: 10}))
+    }, [dispatch])
 
   return (
     <div className="App">
       {/* <Navbar isDesktop={isDesktop} isMobile={isMobile} isTablet={isTablet} /> */}
-      <nav>
+      <nav className="main__nav">
         <div
           className="navbar__logo"
         >RAWG</div>
@@ -26,7 +37,7 @@ function App() {
         </div>
       </nav>
 
-      <section>
+      <section className="filter__container__section">
 
         <div className="filter__container">
           <div className="dropdown">
@@ -60,12 +71,12 @@ function App() {
 
       <main>
         {/* <section className="global__card__container">
-          <div class="card">
+          <div className="card">
             <img src={imgAvatar}
               alt="Avatar"
               className="card__img"
               />
-            <div class="card__container">
+            <div className="card__container">
               <h2><b>Title</b></h2>
               <div className="card__rating__date">
                 <span>5.22</span>
@@ -80,106 +91,15 @@ function App() {
           {/* <div className="card__tablet"> */}
           <div className="Gallery">
 
-            {/* <div class="card__container"> */}
-            <div className="card">
-              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/fbe/fbe1e38e1b21d64c3660a5c01a2f28d7.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/44b/44b2eff1df353a1b2b094b6abc401d2d.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/0bb/0bb0e511659e70114fbd05de8a6331cc.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/14c/14c8374057999a39e21fde4c793cc55e.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
-            <div class="card">
-              <img src="https://media.rawg.io/media/screenshots/727/7278d0a6c35375ede5112518520c75ed.jpg"
-                alt="Avatar"
-                className="card__img"
-              />
-              <h2><b>Title</b></h2>
-              <div className="card__rating__date">
-                <span>5.22</span>
-                <span>02.05.2022</span>
-              </div>
-            </div>
+            {/* <div className="card__container"> */}
+            {gamesList.map(item => 
+            <Card
+            title={item.name}
+            rating={item.rating}
+            avatar={item.background_image}
+            timeStamp={item.released}
+            />
+            )}
           </div>
 
       </section>

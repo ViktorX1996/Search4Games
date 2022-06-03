@@ -17,8 +17,11 @@
     color: white;
     margin: 0;
   }
-  h2{
-    padding: 10px;
+ h2{
+   padding: 10px;
+ }
+  b{
+    word-wrap: break-word;
   }
 main {
   transition: all 2s ease-in-out;
@@ -44,7 +47,8 @@ section{
     border: 1px solid blue;
   }
   img {
-
+    object-fit: cover;
+    height: 25vh;
     width: 100%; 
 
     /* mobile(until 599) 350px */
@@ -76,7 +80,7 @@ section{
   }
  
 
-  nav,section {
+  .filter__container__section, .main__nav, .about__section, .description__page__container{
       width: 95%;
       /* border: 1px solid red; */
       margin: 0 auto;
@@ -91,8 +95,9 @@ section{
   .about__section{
     flex-direction: column;
   }
-  .about__section > h2,span {
+  .about__section > span,b {
     margin-left: 10px;
+    margin-top: 20px;
   }
   .navbar__logo{
         color: white;
@@ -206,6 +211,10 @@ section{
   -o-transition: all 2s ease-in-out; /** Opera **/
 }
 
+
+.description__page__container__title{
+  word-wrap: break-word;
+}
 
 
 
