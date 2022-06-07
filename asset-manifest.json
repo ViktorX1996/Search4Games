@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Search4Games/static/css/main.155647d3.css",
+    "main.css": "/Search4Games/static/css/main.383a3a1c.css",
     "main.js": "/Search4Games/static/js/main.0553ad56.js",
     "index.html": "/Search4Games/index.html",
-    "main.155647d3.css.map": "/Search4Games/static/css/main.155647d3.css.map",
+    "main.383a3a1c.css.map": "/Search4Games/static/css/main.383a3a1c.css.map",
     "main.0553ad56.js.map": "/Search4Games/static/js/main.0553ad56.js.map"
   },
   "entrypoints": [
-    "static/css/main.155647d3.css",
+    "static/css/main.383a3a1c.css",
     "static/js/main.0553ad56.js"
   ]
 }
