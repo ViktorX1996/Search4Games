@@ -6,6 +6,9 @@
     --nav: #84c40d;
     font-size: 1rem;
   }
+  .for{
+    color: var(--text);
+  }
   body,
   h1,
   h2,

@@ -29,7 +29,7 @@ function Search(props) {
           navigate("/");
         }}
       >
-        RAWG
+        Search<span className="for">4</span>Games
       </div>
       <div className="navbar__container">
         <FontAwesomeIcon icon={faSearch} className="navbar__icon" />
