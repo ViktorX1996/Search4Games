@@ -87,6 +87,11 @@
       flex-basis: calc(100% - 20px);
     }
   }
+  @media screen and (max-width: 418px) {
+    .main__nav{
+      flex-direction: column;
+    }
+  }
   @media screen and (max-width: 300px) {
     .filter__container__section{
       flex-direction: column;
