@@ -26,7 +26,7 @@ function Search(props) {
       <div
         className="navbar__logo"
         onClick={() => {
-          navigate("/");
+          navigate("/search4games/");
         }}
       >
         Search<span className="for">4</span>Games
@@ -40,7 +40,7 @@ function Search(props) {
           ref={inputRef}
           onChange={(e) => {
             if (location.pathname.includes("details")) {
-              navigate("/");
+              navigate("/search4games/");
             }
             console.log(inputRef.current.value);
             dispatch(setPage(1));

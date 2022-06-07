@@ -24,7 +24,7 @@ ReactDOM.render(
         <Router>
             <Search />
             <Routes >
-                <Route path="/" element={<App />} />
+                <Route path="/search4games/" element={<App />} />
                 <Route path="/details/:id" element={<DescriptionPage />} />
 
             </Routes>
