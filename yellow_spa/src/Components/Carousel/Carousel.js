@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
 import "./Carousel.css";
+import { useSelector } from 'react-redux';
 
 export const CarouselItem = ({ children, width }) => {
   return (
@@ -14,6 +15,10 @@ export const CarouselItem = ({ children, width }) => {
 const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
+
+  const isMobile = useSelector((state) => state.media.isMobile);
+  const isTablet = useSelector((state) => state.media.isTablet);
+  const isDesktop = useSelector((state) => state.media.isDesktop);
 
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
@@ -60,13 +65,13 @@ const Carousel = ({ children }) => {
         })}
       </div>
       <div className="indicators">
-        {/* <button
+       { isDesktop && <button
           onClick={() => {
             updateIndex(activeIndex - 1);
           }}
         >
           Prev
-        </button> */}
+        </button>}
         {React.Children.map(children, (child, index) => {
           return (
             <button
@@ -75,17 +80,17 @@ const Carousel = ({ children }) => {
                 updateIndex(index);
               }}
             >
-              
+             {isDesktop && index + 1} 
             </button>
           );
         })}
-        {/* <button
+        { isDesktop && <button
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
         >
           Next
-        </button> */}
+        </button>}
       </div>
     </div>
   );
