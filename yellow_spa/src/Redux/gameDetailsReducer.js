@@ -68,6 +68,7 @@ const gameDetailsSlice = createSlice({
         [getGameDetails.pending]: (state, action) => {
             console.log('pending')
             state.status = 'loading'
+            
         },
         [getGameDetails.fulfilled]: (state, { payload }) => {
             console.log(payload);
@@ -80,8 +81,8 @@ const gameDetailsSlice = createSlice({
             state.reddit_url = payload.reddit_url
             state.released = payload.released
             state.developers_name = payload.developers[0].name
-            state.genres_name = payload.genres[0].name
-            state.esrb_rating_name = payload.esrb_rating.name
+            state.genres_name = payload.genres[0]?.name 
+            state.esrb_rating_name = payload.esrb_rating?.name
         },
         [getGameDetails.rejected]: (state, action) => {
             state.status = 'failed'

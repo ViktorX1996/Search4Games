@@ -201,9 +201,16 @@
     font-weight: 500;
     word-wrap: break-word;
   }
-  .desc__rating{
+  .desc__ratingGreat{
     color: rgb(0, 144, 0);
   }
+  .desc__ratingMedium{
+    color: orange;
+  }
+  .desc__ratingBad{
+    color: red;
+  }
+
   @keyframes rainbow{
     0%{color: orange;}  
     10%{color: purple;} 

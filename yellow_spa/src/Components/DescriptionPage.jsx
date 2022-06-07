@@ -60,14 +60,29 @@ function DescriptionPage(props) {
           </div>
           {isDesktop && (
             <div className="desktop__info">
-
-              <p>Released: <span>{released}</span></p>
-              <p>Developer: <span>{developers_name}</span></p>
-              <p>Genre: <span>{genres_name}</span></p>
-              <p>Age rating: <span>{esrb_rating_name}</span></p>
+              <p>
+                Released: <span>{released}</span>
+              </p>
+              <p>
+                Developer: <span>{developers_name}</span>
+              </p>
+              {genres_name && (
+                <p>
+                  Genre: <span>{genres_name}</span>
+                </p>
+              )}
+              {esrb_rating_name && (
+                <p>
+                  Age rating: <span>{esrb_rating_name}</span>
+                </p>
+              )}
             </div>
           )}
-          <div>Rating: <span className="desc__rating">{rating}</span></div>
+          <div>
+            {rating > 4 && <>Rating: <span className="desc__ratingGreat">{rating}</span></>}
+            {rating <= 4 && rating >= 3 && <>Rating: <span className="desc__ratingMedium">{rating}</span></>}
+            {rating <= 2.9 && <>Rating: <span className="desc__ratingBad">{rating}</span></>}
+          </div>
         </div>
 
         <Carousel>
@@ -89,28 +104,36 @@ function DescriptionPage(props) {
       </section>
 
       <section className="website__section">
-        <h2>Website</h2>
-        <h4>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="desc__link"
-            href={website}
-          >
-            {website}
-          </a>
-        </h4>
-        <h2>Reddit: </h2>
-              <h4>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="desc__link"
-                  href={reddit_url}
-                >
-                  {reddit_url}
-                </a>
-              </h4>
+        {website && (
+          <>
+            <h2>Website:</h2>
+            <h4>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="desc__link"
+                href={website}
+              >
+                {website}
+              </a>
+            </h4>
+          </>
+        )}
+        {reddit_url && (
+          <>
+            <h2>Reddit: </h2>
+            <h4>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="desc__link"
+                href={reddit_url}
+              >
+                {reddit_url}
+              </a>
+            </h4>
+          </>
+        )}
       </section>
     </div>
   );
