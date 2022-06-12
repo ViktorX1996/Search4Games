@@ -6,9 +6,9 @@
     --nav: #84c40d;
     font-size: 1rem;
   }
-  .for{
+  /* .for{
     color: var(--text);
-  }
+  } */
   body,
   h1,
   h2,
@@ -121,21 +121,20 @@ section{
         align-items: center;
         /* border: 1px solid red; */
   }
-  .navbar__input{
+  /* .navbar__input{
     
       border-radius: 30px;
       height: 20px;
       border: var(--dark);
-  }
-  .navbar__container {
+  } */
+  /* .navbar__container {
     display: grid;
-    /* 2 columns  auto - takes free space, 1fr is flexibility number */
     grid-template-columns: auto 1fr;  
     grid-template-rows: 1fr;
     gap: 12px;
 
 
-    /* border: 1px solid #CFD5DB; */
+    border: 1px solid #CFD5DB;
     border-radius: 32px;
     background: #fafafa;
     padding: 6px;
@@ -145,16 +144,16 @@ section{
     justify-content: center;
     align-items: center;
     background-color: #4a4a4a !important;
-}
+} */
 
-.navbar__container>.navbar__input {
+/* .navbar__container>.navbar__input {
     outline: none;
     border: none;
     background: transparent;
-}
-.navbar__icon{
+} */
+/* .navbar__icon{
     padding-left: 10px;
-}
+} */
 .dropbtn {
     background-color: #4CAF50;
     color: white;

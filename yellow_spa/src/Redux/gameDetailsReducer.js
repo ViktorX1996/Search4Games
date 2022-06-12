@@ -72,7 +72,7 @@ const gameDetailsSlice = createSlice({
         },
         [getGameDetails.fulfilled]: (state, { payload }) => {
             console.log(payload);
-            state.statusScreenshots = 'success'
+            state.status = 'success'
             state.title = payload.name
             state.description = payload.description
             state.rating = payload.rating

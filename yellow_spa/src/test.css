@@ -18,22 +18,22 @@
     border-radius: 20px;
   }
   
-  .card {
+  /* .card {
     flex-basis: calc(100% / 4 - 20px); 
-    flex-shrink: 0; /* don't shrink, and don't wrap -> leave the container*/
-  }
+    flex-shrink: 0;
+  } */
   @media screen and (min-width: 1527px)  {
-    .card {
+    /* .card {
       flex-basis: calc(100% / 5 - 20px);
       
-    }
-    .navbar__container{
+    } */
+    /* .navbar__container{
         width: 30%;
         justify-content: start;
-      }
-    .navbar__input{
+      } */
+    /* .navbar__input{
         width:100%;
-    }
+    } */
     .description__page__global__container{
       display: flex;
       margin: 10px 30px;
@@ -62,58 +62,56 @@
   }
   
   @media screen and (min-width: 967px) and (max-width: 1526px) {
-    .card {
+    /* .card {
       flex-basis: calc(100% / 4 - 20px);
       
-    }
-    .navbar__container{
+    } */
+    /* .navbar__container{
         width: 25%;
         justify-content: start;
 
-      }
-      .navbar__input{
+      } */
+      /* .navbar__input{
         width:100%;
-    }
+    } */
   }
   
 
   @media screen and (min-width: 600px) and (max-width: 967px) {
-    .card {
+    /* .card {
       flex-basis: calc(100% / 2 - 20px);
-    }
+    } */
   }
   @media screen and (max-width: 599px) {
-    .card {
+    /* .card {
       flex-basis: calc(100% - 20px);
-    }
+    } */
   }
   @media screen and (max-width: 418px) {
-    .main__nav{
+    /* .main__nav{
       flex-direction: column;
-    }
+    } */
   }
   @media screen and (max-width: 300px) {
     .filter__container__section{
       flex-direction: column;
     }
-    .card {
+    /* .card {
       flex-basis: calc(100% - 20px);
-    }
-    .main__nav{
+    } */
+    /* .main__nav{
       flex-direction: column;
-    }
-    .navbar__container{
-        /* width: 25%; */
+    } */
+    /* .navbar__container{
         box-sizing: border-box;
         justify-content: start;
         overflow: hidden;
         gap: 0px;
-      }
-    .navbar__input{
-        /* width:20%; */
+      } */
+    /* .navbar__input{
         
         box-sizing: border-box;
-    }
+    } */
     .description__page__container{
       flex-direction: column;
     }
@@ -121,28 +119,25 @@
       word-break: break-all;
     }
   }
-  .card {
+  /* .card {
     box-sizing: border-box;
-    /* border: 1px solid red; */
     border-radius: 10px;
     background-color: #1f1f1f;
     margin: 10px 10px 10px 10px;
-    /* position: relative; */
     display: flex;
     flex-direction: column;
-  }
-  .card:hover{
+  } */
+  /* .card:hover{
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
     box-shadow: 2px 2px 5px 1px rgba(63, 149, 57, 0.75);
-    
-  }
-  .card__img{
+  } */
+  /* .card__img{
     width: 100%;
     border-radius: 10px 10px 0 0;
-  }
+  } */
 
-  .card__rating__date{
+  /* .card__rating__date{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -151,11 +146,11 @@
     flex-grow: 1;
     align-items: flex-end;
    
-  }
-  .card__rating__date > span{
+  } */
+  /* .card__rating__date > span{
     margin:  0 10px 0 10px;
     border-top: #00c3ff solid 3px;
-  }
+  } */
 
   .description__page__container{
       justify-content: space-between;
@@ -168,15 +163,15 @@
     /* word-wrap: break-word; */
     max-width: 70%;
   }
-  .global__card__container{
+  /* .global__card__container{
     width: 100%;
     transition: all 2s ease-in-out;
-    -webkit-transition: all 2s ease-in-out; /** Chrome & Safari **/
-    -moz-transition: all 2s ease-in-out; /** Firefox **/
-    -o-transition: all 2s ease-in-out; /** Opera **/
+    -webkit-transition: all 2s ease-in-out; 
+    -moz-transition: all 2s ease-in-out; 
+    -o-transition: all 2s ease-in-out; 
     flex-direction: column !important;
-  }
-  .rainbow {
+  } */
+  /* .rainbow {
     font-size: 1.5rem;
     display: inline-block;
     margin-top: 1rem;
@@ -187,7 +182,7 @@
     border-top: 1px solid cyan;
     border-bottom: 1px solid cyan;
     font-weight: 800;
-  }
+  } */
   .desktop__info{
     display: flex;
     flex-direction: column;
@@ -211,7 +206,7 @@
     color: red;
   }
 
-  @keyframes rainbow{
+  /* @keyframes rainbow{
     0%{color: orange;}  
     10%{color: purple;} 
     20%{color: red;}
@@ -223,5 +218,5 @@
     80%{color: DeepPink;}
     90%{color: DodgerBlue;}
     100%{color: orange;}
-  }
+  } */
   

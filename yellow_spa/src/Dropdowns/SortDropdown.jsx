@@ -57,6 +57,7 @@ export const SortDropdown = () => {
         >
           {items.map((item) => (
             <div
+            key={item.id}
               className={styles.dropdownItem}
               onClick={(e) => handleItemClick(e.target.id)}
               id={item.id}

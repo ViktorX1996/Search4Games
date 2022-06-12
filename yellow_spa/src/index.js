@@ -6,9 +6,9 @@ import React from "react";
 import ReactDOM from 'react-dom'
 import gameDetailsReducer from './Redux/gameDetailsReducer';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import DescriptionPage from './Components/DescriptionPage';
 import Search from './Components/Search/Search';
 import mediaReducer from './Redux/mediaReducer';
+import DescriptionPage from './Components/Search/DescriptionPage/DescriptionPage';
 export const store = configureStore({
     reducer: {
         game: gameReducer,

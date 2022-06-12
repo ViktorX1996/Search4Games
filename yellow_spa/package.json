@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ViktorX1996.github.io/Search4Games",
+  "homepage": "https://ViktorX1996.github.io/Search4Games/",
   "name": "yellow_spa",
   "version": "0.1.0",
   "private": true,
@@ -20,7 +20,8 @@
     "react-swipeable": "^7.0.0",
     "react-touch-carousel": "^0.10.2",
     "redux": "^4.2.0",
-    "redux-thunk": "^2.4.1"
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "predeploy": "npm run build",
