@@ -10,13 +10,14 @@ const defaultState = {
     rating: null,
     website: '',
     screenshots: [],
-
+    metacritic: '',
     reddit_url: '',
     released: '',
     developers_name: '',
     genres_name: '',
     esrb_rating_name: '',
-
+    parentPlatforms: [],
+    playtime: '',
 }
 export const getGameDetails = createAsyncThunk(
     'gameDetailsSlice/gameDetails',
@@ -66,35 +67,34 @@ const gameDetailsSlice = createSlice({
     },
     extraReducers: {
         [getGameDetails.pending]: (state, action) => {
-            console.log('pending')
             state.status = 'loading'
-            
         },
         [getGameDetails.fulfilled]: (state, { payload }) => {
-            console.log(payload);
             state.status = 'success'
             state.title = payload.name
             state.description = payload.description
             state.rating = payload.rating
             state.website = payload.website
 
+            state.metacritic = payload.metacritic
             state.reddit_url = payload.reddit_url
-            state.released = payload.released
+            state.released = payload.released?.replaceAll("-", ".").split(".").reverse().join(".")
             state.developers_name = payload.developers[0].name
             state.genres_name = payload.genres[0]?.name 
             state.esrb_rating_name = payload.esrb_rating?.name
+
+            state.parentPlatforms = payload.parent_platforms.map(platform => platform.platform.slug)
+            state.playtime = payload.playtime
         },
         [getGameDetails.rejected]: (state, action) => {
             state.status = 'failed'
         },
         [getGameScreenshots.pending]: (state, action) => {
-            console.log('pending')
             state.statusScreenshots = 'loading'
         },
         [getGameScreenshots.fulfilled]: (state, { payload }) => {
-            console.log(payload);
             state.statusScreenshots = 'success'
-            state.screenshots = payload.results.map(item => item.image)
+            state.screenshots = payload.results.map(item => ({original: item.image, thumbnail: item.image}))
         },
         [getGameScreenshots.rejected]: (state, action) => {
             state.statusScreenshots = 'failed'

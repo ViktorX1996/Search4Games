@@ -3,12 +3,13 @@ import { Provider } from "react-redux";
 import gameReducer from "./Redux/gameReducer";
 import App from "./App";
 import React from "react";
-import ReactDOM from 'react-dom'
 import gameDetailsReducer from './Redux/gameDetailsReducer';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { HashRouter } from 'react-router-dom';
 import Search from './Components/Search/Search';
 import mediaReducer from './Redux/mediaReducer';
 import DescriptionPage from './Components/Search/DescriptionPage/DescriptionPage';
+import {createRoot} from "react-dom/client";
 export const store = configureStore({
     reducer: {
         game: gameReducer,
@@ -16,10 +17,9 @@ export const store = configureStore({
         media: mediaReducer
     }
 })
-
-
-
-ReactDOM.render(
+const container = document.getElementById("root")
+const root = createRoot(container);
+root.render(
     <Provider store={store}>
         <Router>
             <Search />
@@ -29,6 +29,6 @@ ReactDOM.render(
 
             </Routes>
         </Router>
-    </Provider>, document.getElementById('root')
+    </Provider>
 );
 

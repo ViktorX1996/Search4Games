@@ -1,16 +1,18 @@
-import React from 'react';
-import { PlatformDropdown } from '../../Dropdowns/PlatformDropdown';
-import { SortDropdown } from './../../Dropdowns/SortDropdown';
+import React from "react";
+import { UniversalDropdown } from "../../Dropdowns/UniversalDropdown";
+import { setPlatform, setSort } from "../../Redux/gameReducer";
+import { dataPlatform, dataSort } from "./../../Dropdowns/dropdownData";
+import { FilterSection } from "./FiltersStyled";
 
 function Filters(props) {
-    return (
-<section className="filter__container__section">
-<div className='platform__dropdown__div'>
-    <SortDropdown />
-    <PlatformDropdown />
-</div>
-</section>
-    );
+  return (
+    <FilterSection>
+      <div className="platform__dropdown__div">
+        <UniversalDropdown data={dataSort} setAction={setSort} />
+        <UniversalDropdown data={dataPlatform} setAction={setPlatform} />
+      </div>
+    </FilterSection>
+  );
 }
 
 export default Filters;

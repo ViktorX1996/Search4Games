@@ -2,7 +2,6 @@ import styled from "styled-components";
 // import { device } from "../mediaStyled";
 import { device, size } from './../mediaStyled';
 
-
 export const MainNav = styled.nav`
     @media  (max-width: ${size.mobileL}) {
         flex-direction: column;
@@ -57,7 +56,15 @@ export const MainNavSearch = styled.div`
     justify-content: start;
 }
 @media ${device.laptop} and (max-width: ${size.laptopL}) {
-    width: 25%;
+    width: 35%;
+    justify-content: start;
+}
+@media ${device.tablet} and (max-width: ${size.laptop}) {
+    width: 35%;
+    justify-content: start;
+}
+@media ${device.tabletM} and (max-width: ${size.tablet}) {
+    width: 35%;
     justify-content: start;
 }
 @media (max-width: ${size.mobileS}) {
@@ -83,6 +90,9 @@ export const MainNavSearch = styled.div`
     @media ${device.laptop} {
         width:100%;
     }
+    @media (max-width: ${size.mobileL}) {
+        width:100%;
+    }
     @media ${device.mobileS}{
         box-sizing: border-box;
     }
@@ -92,6 +102,14 @@ export const MainNavSearch = styled.div`
     border-radius: 30px;
       height: 25px;
       border: var(--dark);
+    color: white;
+    }
+    & > input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    background: red;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
     }
     & > svg {
         padding-left: 10px;

@@ -1,0 +1,98 @@
+/* mobileS: '320px',
+mobileM: '375px',
+mobileL: '425px',
+tabletM: '599px',
+tablet: '768px',
+laptop: '1024px',
+laptopL: '1440px',
+desktop: '2560px',
+desktopL: '3840px' */
+@media (min-width: 2560px) {
+  .image-gallery-slides{
+      height: 850px;
+  }
+}
+@media (min-width: 1840px) and (max-width: 2560px) {
+  .image-gallery-slides{
+      height: 750px;
+  }
+}
+@media (min-width: 1440px) and (max-width: 2560px) {
+  .image-gallery-slides{
+      height: 550px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .image-gallery-slides{
+      height: 650px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-gallery-slides{
+      height: 600px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .image-gallery-slides{
+      height: 500px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+  .image-gallery-slides{
+      height: 450px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+  .image-gallery-slides{
+      height: 380px;
+  }
+}
+
+@media (max-width: 320px) {
+  .image-gallery-slides{
+      height: 310px;
+      width: auto;
+  }
+}
+
+.image-gallery-slide, .image-gallery-image {
+    max-height:unset;
+    height:100%;
+    border-radius: 10px;
+    object-fit: cover !important;
+    }
+    .image-gallery-slides{
+      border-radius: 10px;
+     }
+    .image-gallery-bullet:hover{
+      background-color: red !important;
+      border: 1px solid red !important;
+    }
+    .image-gallery-icon{
+      color: transparent;
+    }
+    .image-gallery-icon:hover{
+      color: whitesmoke;
+    }
+    .image-gallery-fullscreen-button, .image-gallery-play-button{
+      color: whitesmoke !important;
+    }
+    .image-gallery-thumbnail{
+        border-radius: 10px !important;
+        border: 2px solid transparent !important;
+    }
+    .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus{
+        outline: none;
+        border: 2px solid var(--text) !important;
+    }
+    .image-gallery-thumbnail:hover {
+        border: 2px solid orange !important;
+    }
+    .d-none{
+      display: none;
+    }

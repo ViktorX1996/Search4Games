@@ -3,6 +3,9 @@ import { device } from "../mediaStyled";
 import { size } from '../mediaStyled';
 
 export const CardWrapper = styled.div`
+
+opacity: ${props => props.opacityActive ? 0.5 : 1};
+transition: opacity 0.3s ease;
 @media ${device.laptopL} {
     flex-basis: calc(100% / 5 - 20px);
 }
@@ -37,6 +40,10 @@ export const CardWrapper = styled.div`
 export const CardImage = styled.img`
   width: 100%;
   border-radius: 10px 10px 0 0;
+  object-fit: cover;
+    height: 25vh;
+    width: 100%; 
+    display: block;
 `;
 export const CardTitle = styled.h2`
   color: white;

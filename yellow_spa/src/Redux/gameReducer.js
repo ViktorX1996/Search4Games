@@ -4,6 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 const defaultState = {
     status: null,
     gamesList: [],
+    isOpen: false,
     searchInput: '',
     page: 1,
     count: 1,
@@ -54,6 +55,9 @@ const gameSlice = createSlice({
             state.page = 1;
             state.gamesList = [];
             state.selectedSort = action.payload
+        },
+        setIsOpen: (state, action) => {
+            state.isOpen = action.payload
         }
     },
     extraReducers: {
@@ -83,5 +87,5 @@ const gameSlice = createSlice({
     }
 })
 
-export const { setSearchInput, setPage,setPlatform,setSort } = gameSlice.actions
+export const { setSearchInput, setPage,setPlatform,setSort,setIsOpen } = gameSlice.actions
 export default gameSlice.reducer

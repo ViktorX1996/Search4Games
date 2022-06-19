@@ -1,21 +1,18 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { CardImage, CardWrapper, CardTitle, CardRatingDate } from './cardStyled';
+import { useSelector } from 'react-redux';
+import useJump from '../../hooks/useJump';
 
-function Card(props) {
-  const navigate = useNavigate();
-
-  function jumptoDetails() {
-    navigate(`/details/${props.id}`);
-  }
-
+function Card({id,avatar,title,rating,timeStamp}) {
+  const isOpen = useSelector(state => state.game.isOpen);
+ const jumpToDetails = useJump(id)
   return (
-    <CardWrapper onClick={jumptoDetails}>
-      <CardImage src={props.avatar} alt="Avatar"/>
-      <CardTitle>{props.title}</CardTitle>
+    <CardWrapper opacityActive={isOpen} onClick={jumpToDetails}>
+      <CardImage src={avatar} alt="Avatar"/>
+      <CardTitle>{title}</CardTitle>
       <CardRatingDate>
-        <span>{props.rating}</span>
-        <span>{props.timeStamp}</span>
+        <span>{rating}</span>
+        <span>{timeStamp}</span>
       </CardRatingDate>
     </CardWrapper>
   );
