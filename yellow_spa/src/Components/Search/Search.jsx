@@ -9,7 +9,8 @@ import { MainNav, MainNavSearch } from "./searchStyled";
 import { SearchInput } from "./SearchInput";
 import { MainNavLogoWrapper } from "./MainNavLogoWrapper";
 import { ScreenRes } from "./../../hooks/ScreenRes";
-import useJump from '../../hooks/useJump';
+import useJump from "../../hooks/useJump";
+import ParticlesBackground from "./../particles/ParticlesBackground";
 function Search(props) {
   const dispatch = useDispatch();
   const inputRef = useRef("");
@@ -27,16 +28,19 @@ function Search(props) {
   }, 1000);
   ScreenRes(dispatch);
   return (
-    <MainNav>
-      <MainNavLogoWrapper jumpToHome={jumpToHome} />
-      <MainNavSearch>
-        <FontAwesomeIcon icon={faSearch} />
-        <SearchInput
-          inputRef={inputRef}
-          debouncedChangeHandler={debouncedChangeHandler}
-        />
-      </MainNavSearch>
-    </MainNav>
+    <>
+      <MainNav>
+        <MainNavLogoWrapper jumpToHome={jumpToHome} />
+        <MainNavSearch>
+          <FontAwesomeIcon icon={faSearch} />
+          <ParticlesBackground />
+          <SearchInput
+            inputRef={inputRef}
+            debouncedChangeHandler={debouncedChangeHandler}
+          />
+        </MainNavSearch>
+      </MainNav>
+    </>
   );
 }
 

@@ -4,10 +4,17 @@
     --text: #00c3ff;
     --svg: #ea60ff;
     --nav: #84c40d;
-    --info: #1f1f1f;
+    --info: #1f1f1f8b;
     --desc_text_grey: #555555;
     font-size: 1rem;
   }
+  .particles{
+    z-index: -1000 !important;
+  }
+  /* #root{
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(62,23,0,1) 47%, rgba(2,60,70,1) 93%, rgba(0,69,83,1) 100%);
+  } */
   /* .for{
     color: var(--text);
   } */

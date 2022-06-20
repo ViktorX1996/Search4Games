@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 export const GameInfoContentStyled = styled.div`
     /* border: 1px solid red; */
+    
     border-radius: 10px;
     background-color: var(--info);
+    /* background: #55555582; */
     height: 100%;
     & > p {
         margin: 0;

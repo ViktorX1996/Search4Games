@@ -25,6 +25,7 @@ import { Loader } from "./../../Helpers/loaderStyled";
 import { Error } from "./../../Helpers/Error";
 import { copyText } from "./../../Helpers/copyText";
 import CustomAlert from "./../../Helpers/CustomAlert";
+import Authors from "../../Authors/Authors";
 
 function DescriptionPage(props) {
   const dispatch = useDispatch();
@@ -102,6 +103,7 @@ function DescriptionPage(props) {
                 <GameLinksContent website={website} reddit_url={reddit_url} />
               </LinksInfo>
           </Container>
+          <Authors />
         </>
       )}
     </>

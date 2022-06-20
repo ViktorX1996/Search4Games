@@ -11,7 +11,6 @@ export const ErrorContainer = styled.div`
   margin: 30vh auto;
   height: 20vh;
   width: 50vw;
-  word-wrap: break-word;
   & b {
   font-weight: bold;
   color: #ffc400;

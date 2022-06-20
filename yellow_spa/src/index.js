@@ -10,11 +10,13 @@ import Search from './Components/Search/Search';
 import mediaReducer from './Redux/mediaReducer';
 import DescriptionPage from './Components/Search/DescriptionPage/DescriptionPage';
 import {createRoot} from "react-dom/client";
+import dropdownReducer from './Redux/dropdownReducer';
 export const store = configureStore({
     reducer: {
         game: gameReducer,
         details: gameDetailsReducer,
-        media: mediaReducer
+        media: mediaReducer,
+        dropdown: dropdownReducer
     }
 })
 const container = document.getElementById("root")

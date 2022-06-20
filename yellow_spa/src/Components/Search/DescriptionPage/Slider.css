@@ -63,7 +63,7 @@ desktopL: '3840px' */
 .image-gallery-slide, .image-gallery-image {
     max-height:unset;
     height:100%;
-    border-radius: 10px;
+    border-radius: 5px;
     object-fit: cover !important;
     }
     .image-gallery-slides{
@@ -95,4 +95,7 @@ desktopL: '3840px' */
     }
     .d-none{
       display: none;
+    }
+    .image-gallery-thumbnail .image-gallery-thumbnail-image{
+      border-radius: 8px !important;
     }

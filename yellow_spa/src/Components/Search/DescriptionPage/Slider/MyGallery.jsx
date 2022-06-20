@@ -22,6 +22,7 @@ function MyGallery({ screenshots, isDesktop, isTablet }) {
           thumbnailPosition={isDesktop ? "right" : "bottom"}
           onImageLoad={imageLoadHandler}
           useBrowserFullscreen={false}
+          disableThumbnailScroll
         />
       </div>
       {!imgLoad && (
