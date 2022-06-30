@@ -3,7 +3,6 @@ import { device } from "../mediaStyled";
 import { size } from '../mediaStyled';
 
 export const CardWrapper = styled.div`
-
 opacity: ${props => props.opacityActive ? 0.5 : 1};
 transition: opacity 0.3s ease;
 @media ${device.laptopL} {

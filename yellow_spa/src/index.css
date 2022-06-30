@@ -11,6 +11,7 @@
   .particles{
     z-index: -1000 !important;
   }
+
   /* #root{
     background: rgb(2,0,36);
 background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(62,23,0,1) 47%, rgba(2,60,70,1) 93%, rgba(0,69,83,1) 100%);

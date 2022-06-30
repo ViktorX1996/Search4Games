@@ -14,7 +14,6 @@ function App() {
     dispatch(getAllGames({ page: page, pageSize: pageSize, search: searchInput }))
     dispatch(setPage(page + 1))
   }, [dispatch, searchInput, selectedPlatform, selectedSort,toggle])
-  console.log(page);
 
   const nextAction = () => {
     setToggle(prevValue => !prevValue)

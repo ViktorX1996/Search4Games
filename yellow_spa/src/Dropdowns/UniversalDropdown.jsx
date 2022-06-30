@@ -13,9 +13,7 @@ export const UniversalDropdown = ({
   const [items, setItem] = useState(data);
   const [defaultTitle, setDefaultTitle] = useState("");
   const dispatch = useDispatch();
-  console.log(setIsOpen, "setIsOpen");
   const toggleDropdown = (val) => setOpen(val);
-  console.log(isOpen, "ISOPEN");
   useEffect(() => {
     if (data[0]?.value) {
       setDefaultTitle("Sort: ")

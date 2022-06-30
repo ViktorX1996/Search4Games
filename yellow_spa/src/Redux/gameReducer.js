@@ -62,7 +62,7 @@ const gameSlice = createSlice({
     },
     extraReducers: {
         [getAllGames.pending]: (state, action) => {
-            console.log('pending')
+            // console.log('pending')
             state.status = 'loading'
 
         },
@@ -76,8 +76,8 @@ const gameSlice = createSlice({
             }else{
                 state.isEndOfList = true;
             }
-            console.log('POLUCHILI')
-            console.log(payload)
+            // console.log('fulfilled')
+            // console.log(payload)
             state.status = 'success'
         },
         [getAllGames.rejected]: (state, action) => {
